@@ -15,7 +15,7 @@ jobs:
     - uses: actions/checkout@v3
     - run: tar -cvzf ./dist/test/file.tar.gz ./dist/bundle.js ./public/*
     - uses: ncipollo/release-action@v1
-    with:
+      with:
         artifacts: ./dist/test/file.tar.gz
 
 
