@@ -13,9 +13,10 @@ jobs:
       contents: write
     steps:
     - uses: actions/checkout@v3
+    - run: tar -cvzf ./dist/test/file.tar.gz ./dist/bundle.js ./public/*
     - uses: ncipollo/release-action@v1
-      with:
-        artifacts: dist/bundle.js
+    with:
+        artifacts: ./dist/test/file.tar.gz
 
 
 # - run: |-
