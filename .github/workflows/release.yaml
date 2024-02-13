@@ -1,0 +1,9 @@
+    - run: |-
+      gzip bundle.js index.html asstets/ > thing.gz
+
+      
+      
+
+    - uses: ncipollo/release-action@v1
+      with:
+        artifacts: "thing.gz"
