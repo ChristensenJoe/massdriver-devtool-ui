@@ -19,8 +19,7 @@ jobs:
         cache: 'npm'
     - run: npm ci
     - run: npm run build
-    - run: tar -cvzf ./dist/file.tar.gz ./dist/bundle.js ./public/*
-    - run: ls -li ./dist
+    - run: tar -cvzf ./dist/devtool-ui.tar.gz ./dist/bundle.js ./public/*
     - uses: ncipollo/release-action@v1
       with:
-        artifacts: ./dist/file.tar.gz
+        artifacts: ./dist/devtool-ui.tar.gz
