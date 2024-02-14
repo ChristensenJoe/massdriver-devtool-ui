@@ -6,8 +6,7 @@ on:
     - '*'
 
 jobs:
-
-  build:
+  release:
     runs-on: ubuntu-latest
     permissions:
       contents: write
@@ -24,14 +23,3 @@ jobs:
     - uses: ncipollo/release-action@v1
       with:
         artifacts: ./dist/test/file.tar.gz
-
-
-# - run: |-
-#       gzip bundle.js index.html asstets/ > thing.gz
-
-      
-      
-
-    # - uses: ncipollo/release-action@v1
-    #   with:
-    #     artifacts: "thing.gz"
